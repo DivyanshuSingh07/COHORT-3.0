@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Project</title>
+</head>
+
+<body>
+
+    <main style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; gap: 24px;">
+        <div class="bulb"
+            style="height: 400px;
+                   width: 400px;
+                   border-radius: 50%;
+                   border:6px solid black;
+                   display:flex;
+                   align-items:center;
+                   justify-content:center;">
+        </div>
+
+        <button class="btn"
+            style="height:130px;
+                   width:180px;
+                   font-size:x-large;
+                   border-radius:25%;">
+            On
+        </button>
+
+
+        <button class="btn2" style="height:130px;
+                   width:180px;
+                   font-size:x-large;
+                   border-radius:25%;">Color change</button>
+    </main>
+
+    <script src="script.js"></script>
+
+    <!-- Always place the script file in the body after the main content and the reason is that your JavaScript file is loading before the HTML elements exist. as we place it inside head tag then So when JavaScript runs, .bulb and .btn are not created yet. Hence move  the script tag to the bottom of body. -->
+    
+
+</body>
+</html>

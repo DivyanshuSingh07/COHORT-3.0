@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="top-controls">
+            <button id="pipelineBtn">
+                Browser Pipeline
+            </button>
+            <div class="toggle-mode">
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle"/>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+        </div>
+                
+
+        <div class="task-manager">
+            <div class="task-creation">
+                <input type="text" placeholder="Enter a task...">
+
+                <select id="category" name="category">
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                </select>
+
+                <button>Add Task</button>
+            </div>
+
+            <div class="tasks"></div>
+
+        </div>
+
+    </main>
+
+    <div id="pipelineModal" class="modal">
+
+  <div class="modal-content">
+
+    <span id="closeModal" class="close-btn">
+      &times;
+    </span>
+
+    <h2>Browser Rendering Pipeline</h2>
+
+    <div class="pipeline-diagram">
+
+        <div class="row">
+            <div class="pipeline-card">HTML</div>
+            <div class="arrow">→</div>
+            <div class="pipeline-card">Parsing</div>
+            <div class="arrow">→</div>
+            <div class="pipeline-card">DOM Tree</div>
+        </div>
+
+        <div class="row">
+            <div class="pipeline-card">CSS</div>
+            <div class="arrow">→</div>
+            <div class="pipeline-card">Parsing</div>
+            <div class="arrow">→</div>
+            <div class="pipeline-card">CSSOM Tree</div>
+        </div>
+
+        <div class="merge">
+            DOM Tree + CSSOM Tree
+        </div>
+
+        <div class="arrow big">
+            ↓
+        </div>
+
+        <div class="pipeline-card final">
+            Render Tree
+        </div>
+    </div>
+    
+    <div class="pipeline-timeline">
+
+        <div class="timeline-step">
+            1. HTML Loaded
+        </div>
+
+        <div class="timeline-step">
+            2. Parsing & Tokenization
+        </div>
+
+        <div class="timeline-step">
+            3. DOM Tree Created
+        </div>
+
+        <div class="timeline-step">
+            4. CSS Parsed
+        </div>
+
+        <div class="timeline-step">
+            5. CSSOM Tree Created
+        </div>
+
+        <div class="timeline-step">
+            6. Render Tree Built
+        </div>
+
+        <div class="timeline-step">
+            7. Browser Paints Page
+        </div>
+
+        </div>
+  </div>
+
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
